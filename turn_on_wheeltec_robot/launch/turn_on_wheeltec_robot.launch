@@ -1,0 +1,25 @@
+<launch>
+  <!-- Arguments参数 -->
+  <arg name="car_mode"  default="mini_mec" 
+       doc="opt: mini_akm, senior_akm, top_akm_bs, top_akm_dl,
+                 mini_mec,mini_mec_moveit,senior_mec_bs,senior_mec_dl,top_mec_bs,top_mec_dl,
+                 senior_mec_EightDrive,top_mec_EightDrive,
+                 mini_omni,senior_omni,top_omni,
+                 mini_tank, mini_diff, mini_4wd, top_diff, four_wheel_diff_bs, four_wheel_diff_dl, brushless_senior_diff"/>
+  
+  <!-- turn on base_serial 开启底层单片机的控制节点  -->
+  <include file="$(find turn_on_wheeltec_robot)/launch/include/base_serial.launch" >
+    <arg if="$(eval car_mode=='mini_akm' or car_mode=='senior_akm' or car_mode=='top_akm_bs' or car_mode=='top_akm_dl')"     
+         name="akm"  default="true"/>
+    <arg unless="$(eval car_mode=='mini_akm' or car_mode=='senior_akm' or car_mode=='top_akm_bs' or car_mode=='top_akm_dl')"
+         name="akm"  default="false"/>
+  </include>
+
+  <!-- 发布用于建图、导航的TF关系与小车外形可视化 -->
+  <include file="$(find turn_on_wheeltec_robot)/launch/robot_model_visualization.launch" >
+    <arg name="car_mode" value="$(arg car_mode)"/>
+  </include>
+  
+ </launch>
+
+

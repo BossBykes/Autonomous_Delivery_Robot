@@ -1,0 +1,34 @@
+<launch>
+  <!--打开节点wheeltec_robot，初始化串口等操作-->
+  <arg name="akm"       default="true"/>
+  <arg name="smoother"  default="false"/> <!-- 是否开启速度平滑功能 -->
+  <arg     if="$(arg akm)" name="akm_cmd_vel_topic"  default="ackermann_cmd"/>
+  <arg unless="$(arg akm)" name="akm_cmd_vel_topic"  default="none"/>
+
+  <node pkg="turn_on_wheeltec_robot" type="wheeltec_robot_node" name="wheeltec_robot" output="screen" respawn="false">
+    <param name="usart_port_name"    type="string" value="/dev/wheeltec_controller"/>  
+    <param name="serial_baud_rate"   type="int"    value="115200"/>
+    <param name="robot_frame_id"     type="string" value="base_footprint"/>
+    <param name="akm_cmd_vel"        type="string" value="$(arg akm_cmd_vel_topic)"/> 
+    <param name="product_number"     type="int"    value="0"/>  
+    <!-- 如果开启了平滑功能，则订阅平滑速度 -->
+    <param if="$(arg smoother)"     name="cmd_vel" type="string" value="smoother_cmd_vel"/> 
+    <param unless="$(arg smoother)" name="cmd_vel" type="string" value="cmd_vel"/> 
+  </node>
+
+  <!-- 阿克曼小车订阅阿克曼类型的速度命令/ackermann_cmd -->
+  <node if="$(arg akm)" 
+    pkg="turn_on_wheeltec_robot" type="cmd_vel_to_ackermann_drive.py" name="cmd2ackermann" output="screen">
+    <!-- 如果开启了速度平滑功能，该节点订阅平滑速度 -->
+    <remap if="$(arg smoother)" from="cmd_vel"       to="smoother_cmd_vel"/>
+  </node>
+
+  <!-- 如果开启了速度平滑功能，则运行速度平滑功能包 -->
+  <include if="$(arg smoother)" 
+    file="$(find turn_on_wheeltec_robot)/launch/include/velocity_smoother.launch" >
+  </include>
+
+</launch>
+
+
+
