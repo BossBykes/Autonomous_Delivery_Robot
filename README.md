@@ -2,9 +2,9 @@
 
 ## The Story Behind This Beast
 
-Remember those sci-fi movies where robots deliver packages autonomously? Well, I decided to stop dreaming and actually build one! This isn't your typical Arduino project - this is a full-blown autonomous delivery system that can navigate complex environments, avoid obstacles, and deliver packages like a pro.
+Remember those sci-fi movies where robots deliver packages autonomously? Well, my team and I decided to stop dreaming and actually build one! This isn't your typical Arduino project - this is a full-blown autonomous delivery system that can navigate complex environments, avoid obstacles, and deliver packages like a pro.
 
-After months of planning, coding, debugging (and a few existential crises), I ended up with something that still amazes me every time it runs. It's basically a mini version of what Amazon and FedEx are spending millions developing!
+After months of planning, coding, debugging (and a few existential crises), we ended up with something that still amazed us every time it ran. It's basically a mini version of what Amazon and FedEx are spending millions developing!
 
 ## 🎯 What Makes This Special
 
@@ -17,7 +17,7 @@ After months of planning, coding, debugging (and a few existential crises), I en
 
 ## 🛠️ The Hardware Arsenal
 
-| Component | What I Used | Why This Matters |
+| Component | What We Used | Why This Matters |
 |-----------|-------------|------------------|
 | **Main Computer** | NVIDIA Jetson Nano | AI processing power for computer vision and path planning |
 | **LIDAR** | SLAMTEC RPLIDAR A1 | 360° laser scanning for precise obstacle detection |
@@ -97,7 +97,7 @@ https://github.com/user-attachments/assets/849f9e33-adae-47d0-b6c1-7d9a4fe6c1fa
 - Battery life: 3-4 hours continuous operation
 - Payload capacity: Up to 5kg
 
-## 😅 The Challenges (And How I Survived Them)
+## 😅 The Challenges (And How We Survived Them)
 
 **SLAM Tuning Hell:** Getting the mapping algorithm to work reliably took WEEKS. The robot would get confused in symmetrical environments or when lighting changed. Solution: Tuned parameters for hours and added sensor fusion.
 
@@ -107,9 +107,7 @@ https://github.com/user-attachments/assets/849f9e33-adae-47d0-b6c1-7d9a4fe6c1fa
 
 **Real-world vs Simulation:** Everything worked perfectly in simulation, then the real world happened. Carpet texture, lighting changes, and random obstacles broke everything. Learned that robust robotics is HARD.
 
-**Package Detection:** Teaching the robot to identify and pick up packages reliably was tougher than expected. Had to train custom computer vision models and add multiple backup sensors.
-
-## 🧠 What This Project Taught Me
+## 🧠 What This Project Taught Us
 
 **Technical Skills:**
 - **ROS (Robot Operating System)** - Industry standard for robotics
@@ -138,7 +136,6 @@ https://github.com/user-attachments/assets/849f9e33-adae-47d0-b6c1-7d9a4fe6c1fa
 
 **🚀 What's Coming Next:**
 - [ ] Outdoor GPS navigation
-- [ ] Multiple package handling
 - [ ] Elevator usage (for multi-floor delivery)
 - [ ] Voice commands and interaction
 - [ ] Machine learning for route optimization
@@ -154,7 +151,7 @@ This isn't just a cool project - it's addressing real problems:
 **Offices:** Internal mail and supply delivery  
 **Elder Care:** Medication and meal delivery to residents
 
-The techniques I developed here scale directly to commercial delivery robots that cost 100x more!
+The techniques we developed here scale directly to commercial delivery robots that cost 100x more!
 
 ## 🏷️ Technologies Used
 
