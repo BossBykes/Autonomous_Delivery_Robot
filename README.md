@@ -1,4 +1,4 @@
-# 🤖 Autonomous Delivery Robot
+# Autonomous Delivery Robot
 
 ## The Story Behind This Beast
 
@@ -6,16 +6,16 @@ Remember those sci-fi movies where robots deliver packages autonomously? Well, m
 
 After months of planning, coding, debugging (and a few existential crises), we ended up with something that still amazed us every time it ran. It's basically a mini version of what Amazon and FedEx are spending millions developing!
 
-## 🎯 What Makes This Special
+## What Makes This Special
 
-- **🧭 True Autonomous Navigation** - No remote control, no pre-programmed paths. It figures out where to go all by itself
-- **👁️ Computer Vision** - Uses RGB-D camera to "see" and understand its environment  
-- **🗺️ Real-time Mapping** - Creates maps as it explores (SLAM technology)
-- **🕹️ Omni-directional Movement** - Can move in ANY direction without turning (like those fancy warehouse robots)
-- **📦 Smart Delivery System** - Picks up and delivers packages to specified locations
-- **🧠 ROS Integration** - Built on Robot Operating System for professional-grade robotics
+- **True Autonomous Navigation** - No remote control, no pre-programmed paths. It figures out where to go all by itself
+- **Computer Vision** - Uses RGB-D camera to "see" and understand its environment  
+- **Real-time Mapping** - Creates maps as it explores (SLAM technology)
+- **Omni-directional Movement** - Can move in ANY direction without turning (like those fancy warehouse robots)
+- **Smart Delivery System** - Picks up and delivers packages to specified locations
+- **ROS Integration** - Built on Robot Operating System for professional-grade robotics
 
-## 🛠️ The Hardware Arsenal
+## The Hardware Arsenal
 
 | Component | What We Used | Why This Matters |
 |-----------|-------------|------------------|
@@ -29,7 +29,7 @@ After months of planning, coding, debugging (and a few existential crises), we e
 
 *Total cost: Around $800 (vs $50k+ for commercial delivery robots!)*
 
-## 🚀 How This Actually Works
+## How This Actually Works
 
 ### The Brain (Software Architecture)
 ```python
@@ -72,7 +72,7 @@ while robot.is_running():
 - Identifies packages, delivery points, and obstacles
 - Helps with precise manipulation tasks
 
-## 📊 System Architecture
+## System Architecture
 
 ```
 [LIDAR] ──┐
@@ -84,7 +84,7 @@ while robot.is_running():
                               [Map Database]
 ```
 
-## 🎥 See It In Action on RViz and a Successful Delivery from one Office to the other
+## See It In Action on RViz and a Successful Delivery from one Office to the other
 
 https://github.com/user-attachments/assets/97509934-b928-410e-a01f-22eb8e1eb800
 
@@ -97,7 +97,7 @@ https://github.com/user-attachments/assets/849f9e33-adae-47d0-b6c1-7d9a4fe6c1fa
 - Battery life: 3-4 hours continuous operation
 - Payload capacity: Up to 5kg
 
-## 😅 The Challenges (And How We Survived Them)
+## The Challenges (And How We Survived Them)
 
 **SLAM Tuning Hell:** Getting the mapping algorithm to work reliably took WEEKS. The robot would get confused in symmetrical environments or when lighting changed. Solution: Tuned parameters for hours and added sensor fusion.
 
@@ -107,7 +107,7 @@ https://github.com/user-attachments/assets/849f9e33-adae-47d0-b6c1-7d9a4fe6c1fa
 
 **Real-world vs Simulation:** Everything worked perfectly in simulation, then the real world happened. Carpet texture, lighting changes, and random obstacles broke everything. Learned that robust robotics is HARD.
 
-## 🧠 What This Project Taught Us
+## What This Project Taught Us
 
 **Technical Skills:**
 - **ROS (Robot Operating System)** - Industry standard for robotics
@@ -125,23 +125,23 @@ https://github.com/user-attachments/assets/849f9e33-adae-47d0-b6c1-7d9a4fe6c1fa
 - Test in small increments - debugging a full system is nightmare fuel
 - Battery management is crucial for autonomous systems
 
-## 🔄 Current Features vs Future Dreams
+## Current Features vs Future Dreams
 
-**✅ What Works Now:**
+**What Works Now:**
 - Autonomous navigation in indoor environments
 - Real-time obstacle avoidance
 - Package pickup and delivery
 - Remote monitoring and control
 - Map saving and reloading
 
-**🚀 What's Coming Next:**
+**What's Coming Next:**
 - [ ] Outdoor GPS navigation
 - [ ] Elevator usage (for multi-floor delivery)
 - [ ] Voice commands and interaction
 - [ ] Machine learning for route optimization
 - [ ] Integration with delivery management systems
 
-## 💭 Real-World Applications
+## Real-World Applications
 
 This isn't just a cool project - it's addressing real problems:
 
@@ -153,7 +153,7 @@ This isn't just a cool project - it's addressing real problems:
 
 The techniques we developed here scale directly to commercial delivery robots that cost 100x more!
 
-## 🏷️ Technologies Used
+## Technologies Used
 
 `ROS` `Python` `OpenCV` `SLAM` `LIDAR` `Computer-Vision` `Autonomous-Navigation` `Jetson-Nano` `Path-Planning` `Robotics` `Omni-Wheels` `Sensor-Fusion`
 
