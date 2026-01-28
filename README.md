@@ -159,6 +159,6 @@ The techniques we developed here scale directly to commercial delivery robots th
 
 ---
 
-**Built with determination, lots of debugging, and an unhealthy amount of coffee ☕**
+**Built with determination, lots of debugging, and an unhealthy amount of coffee**
 
 *This project convinced me that the future of robotics isn't just in labs - it's something we can build today with the right combination of hardware, software, and persistence. Every delivery this robot makes feels like science fiction becoming reality!*
